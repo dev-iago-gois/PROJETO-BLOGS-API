@@ -36,9 +36,7 @@ module.exports = {
         allowNull:false,
         type: Sequelize.DATE,
       },
-    }, {
-      timestamps: false
-    });
+    }, { timestamps: false });
     // {
     //   timestamps: true,
     //   createdAt: 'published',
