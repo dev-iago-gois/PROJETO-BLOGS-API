@@ -5,10 +5,11 @@ const tokenValidation = (req, res, next) => {
   if (!token) {
     return res.status(401).json({ message: 'Token not found' });
   }
-
   try {
-    const tokenWithoutBearer = token.split(' ')[1];
-    const payload = verifyToken(tokenWithoutBearer);
+    // TODO deitei nessa pqp
+    const verifiedToken = token.includes('Bearer') ? token.split(' ')[1] : token;
+  
+    const payload = verifyToken(verifiedToken);
     req.payload = payload;
     next();
   } catch (error) {
