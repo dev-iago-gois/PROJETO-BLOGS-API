@@ -7,8 +7,8 @@ const tokenValidation = (req, res, next) => {
   }
 
   try {
-    const payload = verifyToken(token);
-    console.log(payload);
+    const tokenWithoutBearer = token.split(' ')[1];
+    const payload = verifyToken(tokenWithoutBearer);
     req.payload = payload;
     next();
   } catch (error) {
