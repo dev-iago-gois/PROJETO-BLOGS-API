@@ -1,6 +1,6 @@
 const { userSchema } = require('../schemas');
 const { User } = require('../models');
-const { createToken } = require('../utils/token');
+const { createToken } = require('../utils/tokenManage');
 
 const createUser = async (userData) => {
   const result = userSchema.validate(userData);
