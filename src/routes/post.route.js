@@ -1,0 +1,7 @@
+const route = require('express').Router();
+const { postController } = require('../controllers');
+const tokenValidation = require('../middlewares/tokenValidation');
+
+route.post('/', tokenValidation, postController.create);
+
+module.exports = route;
