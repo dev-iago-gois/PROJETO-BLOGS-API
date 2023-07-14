@@ -7,6 +7,12 @@ const create = async (req, res) => {
   return res.status(mapStatusHTTP(status)).json(data);
 };
 
+const getAll = async (_req, res) => {
+  const { status, data } = await userService.getAll();
+  return res.status(mapStatusHTTP(status)).json(data);
+};
+
 module.exports = {
   create,
+  getAll,
 };
