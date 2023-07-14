@@ -12,10 +12,9 @@ module.exports = (sequelize, DataTypes) => {
     underscored: true,
   });
 
-  // Category.associate = (models) => {
-  //     Category.belongsTo(models.posts_categories,
-  //       { foreignKey: 'id', as: 'category_id' })
-  //   }
+  Category.associate = (models) => {
+      Category.hasMany(models.BlogPost, { foreignKey: 'categoryId', as: 'blogPosts' });
+    }
 
   return Category;
 };
