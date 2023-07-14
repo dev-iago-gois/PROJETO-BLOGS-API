@@ -6,7 +6,6 @@ const tokenValidation = (req, res, next) => {
     return res.status(401).json({ message: 'Token not found' });
   }
   try {
-    // TODO deitei nessa pqp
     const verifiedToken = token.includes('Bearer') ? token.split(' ')[1] : token;
   
     const payload = verifyToken(verifiedToken);
