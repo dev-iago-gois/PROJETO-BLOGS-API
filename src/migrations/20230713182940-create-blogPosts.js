@@ -37,12 +37,6 @@ module.exports = {
         type: Sequelize.DATE,
       },
     }, { timestamps: false });
-    // {
-    //   timestamps: true,
-    //   createdAt: 'published',
-    //   updatedAt: 'updated',
-    // });
-
   },
 
   down: async (queryInterface, Sequelize) => {
