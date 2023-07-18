@@ -10,11 +10,8 @@ const create = async (userId, title, content, categoryIds) => {
 
   const allCategories = await Category.findAll();
   const allCategoriesIds = allCategories.map((category) => category.id);
-  console.log(allCategoriesIds);
   const invalidCategories = categoryIds
   .filter((categoryId) => !allCategoriesIds.includes(categoryId));
-  console.log(invalidCategories);
-
   if (invalidCategories.length) {
     return { status: 'BAD_REQUEST', data: { message: 'one or more "categoryIds" not found' } };
   }
