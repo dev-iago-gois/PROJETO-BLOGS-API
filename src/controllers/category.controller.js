@@ -12,7 +12,14 @@ const getAll = async (req, res) => {
   return res.status(mapStatusHTTP(status)).json(data);
 };
 
+const getById = async (req, res) => {
+  const { id } = req.params;
+  const { status, data } = await categoryService.getById(id);
+  return res.status(mapStatusHTTP(status)).json(data);
+};
+
 module.exports = {
   create,
   getAll,
+  getById,
 };

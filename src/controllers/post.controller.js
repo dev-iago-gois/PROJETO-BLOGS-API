@@ -2,10 +2,10 @@ const { postService } = require('../services');
 const mapStatusHTTP = require('../utils/mapStatusHTTP');
 
 const create = async (req, res) => {
-  // TODO refatorar todo esse codigo
   const { title, content, categoryIds } = req.body;
-  const newPost = await postService.create(title, content, categoryIds);
-  return res.status(mapStatusHTTP.CREATED).json(newPost);
+  const { id } = req.payload;
+  const { status, data } = await postService.create(id, title, content, categoryIds);
+  return res.status(mapStatusHTTP(status)).json(data);
 };
 
 const getAll = async (_req, res) => {

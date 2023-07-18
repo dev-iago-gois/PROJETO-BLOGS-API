@@ -17,7 +17,14 @@ const getAll = async () => {
   return { status: 'SUCCESSFUL', data: categories };
 };
 
+const getById = async (id) => {
+  const category = await Category.findByPk(id);
+  if (!category) return { status: 'NOT_FOUND', data: { message: 'Categoria não encontrada' } };
+  return { status: 'SUCCESSFUL', data: category };
+};
+
 module.exports = {
   create,
   getAll,
+  getById,
 };
