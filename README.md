@@ -1,4 +1,4 @@
-# :construction: Todos os commits "Initial commit, foram feitos pela @Trybe" :construction:
+# :construction: Todos os commits "Initial commit" foram feitos pela @Trybe :construction:
 
 <!-- Olá, Tryber!
 Esse é apenas um arquivo inicial para o README do seu projeto.
