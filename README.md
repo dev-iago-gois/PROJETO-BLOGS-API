@@ -1,4 +1,4 @@
-# :construction: README em construção ! :construction:
+# :construction: Todos os commits "Initial commit, foram feitos pela @Trybe" :construction:
 
 <!-- Olá, Tryber!
 Esse é apenas um arquivo inicial para o README do seu projeto.
@@ -10,7 +10,7 @@ Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua cr
 - quais arquivos/pastas foram desenvolvidos pela Trybe.
 -->
 
-# LISTAGEM DE REQUISITOS
+## LISTAGEM DE REQUISITOS
 
 Aqui está a lista de requisitos:
 
